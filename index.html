@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinkit Data Analysis</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font and custom styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 lg:p-12">
+
+    <!-- Main Content Container -->
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+        
+        <!-- Header Section -->
+        <header class="bg-indigo-600 text-white p-6 md:p-8 lg:p-10 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Blinkit Data Analysis</h1>
+            <p class="text-indigo-200 text-lg">A project showcasing key insights from the Blinkit dataset.</p>
+        </header>
+        
+        <!-- Project Description Section -->
+        <section class="p-6 md:p-8 lg:p-10">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Project Overview</h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+                This project is a guided data analysis of the Blinkit dataset. It involves cleaning and standardizing data,
+                calculating key performance indicators (KPIs) like total sales and average ratings, and creating visualizations.
+                A key insight from the project is that 'Low Fat' items account for the majority of total sales. The project
+                demonstrates proficiency in using popular Python libraries such as pandas, numpy, and matplotlib for data analysis.
+            </p>
+
+            <!-- Key Findings -->
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Key Findings</h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-600">
+                <li class="pl-2">**Data Cleaning**: Standardized the `Item_Fat_Content` column to ensure consistency.</li>
+                <li class="pl-2">**KPIs**: Calculated key business metrics, including total sales, average sales, and average product ratings.</li>
+                <li class="pl-2">**Visualizations**: Visualizations were created to highlight key insights, such as total sales by fat content and location.</li>
+            </ul>
+        </section>
+
+        <!-- Visualizations Section -->
+        <section class="p-6 md:p-8 lg:p-10 border-t border-gray-200">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Visualizations</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Below are the charts generated from the analysis data.
+            </p>
+            
+            <!-- Charts as Images -->
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Pie Chart Image -->
+                <div class="flex-1 rounded-lg shadow-sm overflow-hidden">
+                    <h4 class="font-medium text-gray-700 mb-4 text-center">Total Sales by Item Fat Content</h4>
+                    <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22pie%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Low%20Fat%22%2C%22Regular%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B1800000%2C1200000%5D%2C%22backgroundColor%22%3A%5B%22%236366f1%22%2C%22%23a3e635%22%5D%7D%5D%7D%2C%22options%22%3A%7B%22responsive%22%3Atrue%2C%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Total%20Sales%20by%20Item%20Fat%20Content%22%7D%2C%22tooltips%22%3A%7B%22callbacks%22%3A%7B%22label%22%3A%22function(context)%20%7B%20return%20context.label%20%2B%20%27%3A%20%24%27%20%2B%20context.parsed.toLocaleString()%3B%20%7D%22%7D%7D%7D%7D" alt="Pie chart showing sales distribution by fat content" class="w-full h-auto rounded-lg">
+                </div>
+
+                <!-- Bar Chart Image -->
+                <div class="flex-1 rounded-lg shadow-sm overflow-hidden">
+                    <h4 class="font-medium text-gray-700 mb-4 text-center">Total Sales by Outlet Location</h4>
+                    <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22horizontalBar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Tier%203%22%2C%22Tier%202%22%2C%22Tier%201%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Total%20Sales%22%2C%22data%22%3A%5B1500000%2C1000000%2C500000%5D%2C%22backgroundColor%22%3A%22%23a3e635%22%7D%5D%7D%2C%22options%22%3A%7B%22responsive%22%3Atrue%2C%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Total%20Sales%20by%20Outlet%20Location%20Type%22%7D%2C%22scales%22%3A%7B%22xAxes%22%3A%5B%7B%22ticks%22%3A%7B%22beginAtZero%22%3Atrue%2C%22callback%22%3A%22function(value%2C%20index%2C%20values)%20%7B%20return%20%27%24%27%20%2B%20value.toLocaleString()%3B%20%7D%22%7D%7D%5D%7D%7D%7D" alt="Bar chart showing total sales by outlet location type" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Snippets Section -->
+        <section class="bg-gray-100 p-6 md:p-8 lg:p-10 border-t border-gray-200">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Code Snippets</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Below are some of the key Python code snippets used in the analysis.
+            </p>
+            
+            <!-- Code Block 1: Data Cleaning -->
+            <div class="bg-white rounded-lg p-4 mb-6 shadow-sm">
+                <h4 class="font-medium text-gray-700 mb-2">1. Standardizing Item Fat Content</h4>
+                <pre class="bg-gray-800 text-gray-50 text-sm rounded-md p-4 overflow-x-auto"><code>
+# Standardize 'Item_Fat_Content' values
+df['Item_Fat_Content'] = df['Item_Fat_Content'].replace(
+    ['low fat', 'LF', 'reg'],
+    ['Low Fat', 'Low Fat', 'Regular']
+)
+print(df['Item_Fat_Content'].value_counts())
+                </code></pre>
+            </div>
+
+            <!-- Code Block 2: Visualizing Sales by Location -->
+            <div class="bg-white rounded-lg p-4 mb-6 shadow-sm">
+                <h4 class="font-medium text-gray-700 mb-2">2. Visualizing Sales by Outlet Location</h4>
+                <pre class="bg-gray-800 text-gray-50 text-sm rounded-md p-4 overflow-x-auto"><code>
+# Group by location and sort by sales
+sales_by_location = df.groupby('Outlet_Location_Type')['Sales'].sum().reset_index()
+sales_by_location = sales_by_location.sort_values('Sales', ascending=False)
+
+# Create a bar plot
+plt.figure(figsize=(8, 3))
+sns.barplot(x='Sales', y='Outlet_Location_Type', data=sales_by_location)
+plt.title('Total Sales by Outlet Location Type')
+plt.xlabel('Total Sales')
+plt.ylabel('Outlet Location Type')
+plt.show()
+                </code></pre>
+            </div>
+            
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-200 p-6 md:p-8 text-center text-sm text-gray-500">
+            &copy; 2024 Your Name. All rights reserved. | Created from a Jupyter Notebook Project.
+        </footer>
+    </div>
+</body>
+</html>
